@@ -23,23 +23,6 @@ app.get("/home", (req, res) => {
 app.get("/cadastroLivro", (req, res) => {
     res.sendFile(__dirname + '/views/cadastroLivro.html');
 });
-
-// app.get("/listar-alunos", async (req, res) => {
-//     await aluno.findAll({
-//         order:[['id', 'DESC']]
-//     })
-//     .then((alunos) => {
-//         return res.json({
-//             erro: false,
-//             dados: alunos
-//         })
-//         }).catch(() => {
-//             return res.status(400).json({
-//                 erro: true,
-//                 mensagem: 'erro: Aluno não cadastrado com sucesso'
-//             })
-//         })
-// });
   
 app.post("/login", async (req, res) => {
     const { email, senha } = req.body;
